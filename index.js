@@ -1,4 +1,5 @@
-const http = require('http');
+import express from 'express';
+const app = express();
 
 let notes = [
   {
