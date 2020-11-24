@@ -19,6 +19,12 @@ let notes = [
     content: "GET and POST are the most important methods of HTTP protocol",
     date: "2019-05-30T19:20:14.298Z",
     important: true
+  },
+  {
+    id: 4,
+    content: "The devil is a liar",
+    date: "2019-05-30T19:20:14.298Z",
+    important: true
   }
 ]
 
