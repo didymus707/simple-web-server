@@ -2,7 +2,20 @@ const { request, response } = require('express');
 const express = require('express');
 const app = express();
 
-app.use(express.json());
+// Express.json() is a middleware
+// app.use(express.json());
+
+// implementing a middleware that prints information
+// about every request that is sent to the server
+// A middleware takes three parameters
+
+const requestLogger  = ((request, response, next) => {
+  console.log('Method:', request.method);
+  console.log('Path:', request.path);
+  console.log('Body:', request.body);
+  console.log('----');
+  next();
+});
 
 let notes = [
   {
