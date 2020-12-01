@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 
 // Express.json() is a middleware
-// app.use(express.json());
+app.use(express.json());
 
 // implementing a middleware that prints information
 // about every request that is sent to the server
@@ -16,6 +16,8 @@ const requestLogger  = ((request, response, next) => {
   console.log('----');
   next();
 });
+
+app.use(requestLogger);
 
 let notes = [
   {
